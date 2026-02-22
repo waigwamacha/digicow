@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  digicow-ml-project:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: digicow_ml_project
+    ports:
+      - "8888:8888"
+    volumes:
+      - "./digicow:/app/digicow"
+
+    environment:
+      - JUPYTER_ENABLE_LAB=true
+      - JUPYTER_PASSWORD=${JUPYTER_PASS} # Replace with generated password in production
+    restart: unless-stopped
+
