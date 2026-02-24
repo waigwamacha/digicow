@@ -12,6 +12,7 @@ RUN apt-get update && \
         libfreetype6 \
         libpng-dev \
         libopenblas-dev \
+        libgomp1 \
         wget \
         curl \
         unzip \
@@ -22,10 +23,14 @@ RUN pip install --no-cache-dir \
     numpy \
     pandas \
     scikit-learn \
+    xgboost \
     #tensorflow==2.13.0 \
+    catboost \
     #torch==2.3.0+cu118 torchvision==0.13.0+cu118 -f https://download.pytorch.org/whl/cu118/torch_stable.html \
+    lightgbm \
     matplotlib \
     seaborn \
+    optuna \
     jupyterlab \
     ipykernel \
     notebook \
